@@ -6,12 +6,12 @@
 #define LEN 6 
 
 /**
- * Increment EVERY OTHER number in an array by 1.
+ * Increment EVERY OTHER TWO numbers in an array by 1.
  */
 void increment(int arr[], int length)
 {
-    int i;
-    while (i <= length) {
+    int i = 0;
+    while (i < length - 1) {
         arr[i]++;
         i += 2;
     }
@@ -19,10 +19,8 @@ void increment(int arr[], int length)
 
 int main()
 {
-    int arr[LEN];
-    int arr2[LEN];
-    
-//  printf("arr=%p, arr2=%p\n", arr, arr2);
+    int *arr = malloc(sizeof(*arr) * LEN);
+    int *arr2 = malloc(sizeof(*arr2) * LEN);
 
     for (int i = 0; i < LEN; i++) {
         arr[i] = i;
@@ -38,6 +36,9 @@ int main()
     for (int i = 0; i < LEN; i++) {
         printf("arr2[%d] = %d\n", i, arr2[i]);
     }
+
+    free(arr);
+    free(arr2);
 
     return 0;
 }
