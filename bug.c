@@ -13,6 +13,7 @@ void increment(int arr[], int length)
     int i;
     while (i <= length) {
         arr[i]++;
+        i += 2;
     }
 }
 
