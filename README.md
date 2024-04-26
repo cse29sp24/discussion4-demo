@@ -18,7 +18,7 @@ Ask for theories.
 
 Time to use valgrind! Compile using an additional `-g` flag.
 
-Run valgrind: `valgrind --leak-check=full --track-origins=yes ./a.out` to see
+Run valgrind: `valgrind --leak-check=full --track-origins=yes ./bug` to see
 that there are warnings for using uninitialized values.
 
 Print out what the uninitialized value is -- GARBAGE! Ha!
