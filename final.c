@@ -23,8 +23,8 @@ int main()
     int *arr2 = malloc(sizeof(*arr2) * LEN);
 
     for (int i = 0; i < LEN; i++) {
-        arr[i] = i;
-        arr2[i] = i * 10;
+        arr[i] = i + 1;
+        arr2[i] = (i + 1) * 10;
     }
 
     increment(arr, LEN);
